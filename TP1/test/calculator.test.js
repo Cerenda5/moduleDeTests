@@ -1,4 +1,5 @@
 const expect = require('chai').expect;
+// const expect = require('mocha').expect;
 // import calculator file
 const calculator = require('../calculator');
 describe('calculator.js tests', () => {
@@ -22,6 +23,10 @@ describe('calculator.js tests', () => {
           const result = calculator.subtract(2, 2);
           expect(result).to.equal(0);
       });
+      it('should equal 2', () => {
+        const result = calculator.subtract(4, 2); //Erreur
+        expect(result).to.equal(6);
+    });
   });
     
     describe('calculator.multiply() Test', () => {
